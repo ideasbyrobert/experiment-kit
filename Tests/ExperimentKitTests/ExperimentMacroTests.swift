@@ -21,13 +21,13 @@ final class ExperimentMacroTests: XCTestCase
             """,
             expandedSource: """
             {
-                let value = two == four
+            	let value = two == four
 
-                return ExperimentKit.Experiment(
-                    source: "two == four",
-                    result: String(describing: value),
-                    resultType: String(reflecting: Swift.type(of: value))
-                )
+            	return ExperimentKit.Experiment(
+            		source: "two == four",
+            		result: String(describing: value),
+            		resultType: String(reflecting: Swift.type(of: value))
+            	)
             }()
             """,
             macros: testMacros
